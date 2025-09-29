@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Threading;
 
 namespace Task_Performance_Thread_Priority_Navarro_04
 {
@@ -15,6 +16,20 @@ namespace Task_Performance_Thread_Priority_Navarro_04
         public Form1()
         {
             InitializeComponent();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Thread threadA = new Thread(MyThreadClass.Thread1);
+            Thread threadB = new Thread(MyThreadClass.Thread2);
+            Thread threadC = new Thread(MyThreadClass.Thread1);
+            Thread threadD = new Thread(MyThreadClass.Thread2);
+
+            threadA.Name = "Thread A";
+            threadB.Name = "Thread B";
+            threadC.Name = "Thread C";
+            threadD.Name = "Thread D";
+
         }
     }
 }
