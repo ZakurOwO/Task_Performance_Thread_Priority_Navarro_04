@@ -30,6 +30,12 @@ namespace Task_Performance_Thread_Priority_Navarro_04
             threadC.Name = "Thread C";
             threadD.Name = "Thread D";
 
+
+            threadA.Priority = ThreadPriority.Highest;
+            threadB.Priority = ThreadPriority.Normal;
+            threadC.Priority = ThreadPriority.AboveNormal;
+            threadD.Priority = ThreadPriority.BelowNormal;
+
         }
     }
 }
