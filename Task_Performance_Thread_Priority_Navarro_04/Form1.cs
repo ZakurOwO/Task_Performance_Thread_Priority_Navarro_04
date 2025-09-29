@@ -36,6 +36,21 @@ namespace Task_Performance_Thread_Priority_Navarro_04
             threadC.Priority = ThreadPriority.AboveNormal;
             threadD.Priority = ThreadPriority.BelowNormal;
 
+            threadA.Start();
+            threadB.Start();
+            threadC.Start();
+            threadD.Start();
+
+
+            threadA.Join();
+            threadB.Join();
+            threadC.Join();
+            threadD.Join();
+
+
+            ThreadStatus.Text = "- Threads are running -";
+            
+
         }
     }
 }
