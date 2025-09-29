@@ -48,7 +48,7 @@ namespace Task_Performance_Thread_Priority_Navarro_04
             threadD.Join();
 
 
-            ThreadStatus.Text = "- Threads are running -";
+            ThreadStatus.Text = "- End of Threads -";
             
 
         }
